@@ -27,6 +27,7 @@ wp_print_styles( array( 'chilevapea-content', 'chilevapea-front-page' ) ); // No
 
 		endwhile; // End of the loop.
 		?>
+		<?php dynamic_sidebar( 'home-widgets' ); ?>
 		<?php the_posts_navigation(); ?>
 
 	</main><!-- #primary -->

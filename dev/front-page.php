@@ -27,6 +27,7 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 
 		endwhile; // End of the loop.
 		?>
+		<?php dynamic_sidebar( 'home-widgets' ); ?>
 		<?php the_posts_navigation(); ?>
 
 	</main><!-- #primary -->
