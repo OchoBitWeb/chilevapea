@@ -1,0 +1,13 @@
+body,button,input,textarea{font-family:'PT Serif',serif}ul{list-style:none;margin:0}
+ul li{padding:0 1em}@media(min-width:768px){.col-full{max-width:100%;padding:0 1em}
+}#topbar{background-color:#383838;color:white;display:flex;justify-content:flex-end;padding:1em}
+#topbar .section .title{color:#fff}#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu{display:flex}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item a{color:white}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item a:hover{color:#fafafa}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.icon{font-size:0}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.icon a:before{font:normal normal normal 14px/1 FontAwesome;font-size:20px;padding:0 .5em}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.cart a:before{content:'\f291'}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.account a:before{content:'\f007'}
+#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.logout a:before{content:'\f090'}
+.woocommerce-active .site-header{padding-top:0}.woocommerce-active .site-header .site-branding{max-width:200px}
+.main-navigation ul{background-color:#fafafa}.main-navigation ul li:hover{background-color:#383838}

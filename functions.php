@@ -1,26 +1,69 @@
 <?php
+/**
+ * Chilevapea Theme
+ *
+ * @package    chilevapea
+ */
 
 /**
- * Storefront automatically loads the core CSS even if using a child theme as it is more efficient
- * than @importing it in the child theme style.css file.
- *
- * Uncomment the line below if you'd like to disable the Storefront Core CSS.
- *
- * If you don't plan to dequeue the Storefront Core CSS you can remove the subsequent line and as well
- * as the sf_child_theme_dequeue_style() function declaration.
+ * Enqueue the Child Theme CSS
  */
-//add_action( 'wp_enqueue_scripts', 'sf_child_theme_dequeue_style', 999 );
+function chilevapea_scripts() {
+	// Google Fonts. Add these lines if your website will use a different font.
+	wp_enqueue_style( 'chilevapea-pt-serif', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700' );
+	//Styles
+	wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'chilevapea-style', get_stylesheet_directory_uri() . '/assets/css/custom.css' );
+	// Scripts
+	wp_enqueue_script( 'chilevapea-script', get_stylesheet_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), '20150825', true );
+}
+add_action( 'wp_enqueue_scripts', 'chilevapea_scripts' );
 
 /**
- * Dequeue the Storefront Parent theme core CSS
+ * Top Bar widget
  */
-function sf_child_theme_dequeue_style() {
-	wp_dequeue_style( 'storefront-style' );
-	wp_dequeue_style( 'storefront-woocommerce-style' );
+
+// Register widget
+function topbar_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Topbar Widget',
+		'id'            => 'topbar_widget',
+		'before_widget' => '<div  class="section">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Home Banner Widget',
+		'id'            => 'home_banner_widget',
+		'before_widget' => '<div  class="banner-section">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'topbar_widgets_init' );
+
+// Add to top bar
+function topbar_widget( $content ) {
+	if ( is_active_sidebar( 'topbar_widget' ) && is_main_query() ) {
+		echo '<div id="topbar">';
+		dynamic_sidebar( 'topbar_widget' );
+		echo '</div>';
+	}
+	return $content;
+}
+add_filter( 'storefront_before_header', 'topbar_widget' );
+
+// Add Home Banner
+
+function home_banner_widget( $content ) {
+	if ( is_active_sidebar( 'home_banner_widget' ) && is_main_query() && is_front_page() ) {
+		echo '<div id="banner">';
+		dynamic_sidebar( 'home_banner_widget' );
+		echo '</div>';
+	}
+	return $content;
 }
 
-/**
- * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
- */
-
-
+add_filter( 'storefront_before_content', 'home_banner_widget' );

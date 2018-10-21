@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-gulp.task('default', function() {	 
+gulp.task('default', function() {
 	console.log('Use the following commands');
 	console.log('--------------------------');
 	console.log('gulp compile-css    to compile the custom.scss to custom.css');
@@ -10,6 +10,7 @@ gulp.task('default', function() {
 });
 
 var sass = require('gulp-sass');
+var uglifycss = require('gulp-uglifycss');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -20,6 +21,10 @@ var gettext = require('gulp-gettext');
 gulp.task('sass', function() {
 	gulp.src('assets/css/custom.scss')
 		.pipe(sass())
+		.pipe(uglifycss({
+			"maxLineLen": 80,
+			"uglyComments": true
+		  }))
 		.pipe(gulp.dest('assets/css'));
 });
 
@@ -31,11 +36,11 @@ gulp.task('js', function() {
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js'));
 });
- 
+
 gulp.task('compile-css', ['sass']);
 gulp.task('compile-js', ['js']);
 
-gulp.task('watch', function() {	 
+gulp.task('watch', function() {
 	gulp.watch('assets/css/custom.scss', ['sass']);
 	gulp.watch('assets/js/custom.js', ['js']);
 });
