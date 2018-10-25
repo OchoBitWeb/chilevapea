@@ -1,13 +1,21 @@
 body,button,input,textarea{font-family:'PT Serif',serif}ul{list-style:none;margin:0}
 ul li{padding:0 1em}@media(min-width:768px){.col-full{max-width:100%;padding:0 1em}
-}#topbar{background-color:#383838;color:white;display:flex;justify-content:flex-end;padding:1em}
-#topbar .section .title{color:#fff}#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu{display:flex}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item a{color:white}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item a:hover{color:#fafafa}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.icon{font-size:0}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.icon a:before{font:normal normal normal 14px/1 FontAwesome;font-size:20px;padding:0 .5em}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.cart a:before{content:'\f291'}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.account a:before{content:'\f007'}
-#topbar .section .menu-top-bar-menu-container #menu-top-bar-menu .menu-item.logout a:before{content:'\f090'}
-.woocommerce-active .site-header{padding-top:0}.woocommerce-active .site-header .site-branding{max-width:200px}
-.main-navigation ul{background-color:#fafafa}.main-navigation ul li:hover{background-color:#383838}
+}i.fa,i.fab{font:normal normal normal 30px/1 FontAwesome;color:white}#masthead{padding-top:0;background-image:url(/wp-content/uploads/2018/10/black_leather_background.jpg);background-size:cover}
+#masthead .col-full{padding:0}#masthead #topbar{color:white;display:flex;justify-content:flex-end;padding:2em;margin-bottom:-4em}
+#masthead #topbar #topbar-left,#masthead #topbar #topbar-right{width:50%;display:flex}
+#masthead #topbar #topbar-right{justify-content:flex-end}#masthead #topbar .section{display:flex;justify-content:center;flex-direction:column}
+#masthead #topbar .section .title{color:#fff}#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left{display:flex}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item a,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item a,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item a,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item a{color:white}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item a:hover{color:#fafafa}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item.icon,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item.icon,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item.icon,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item.icon{font-size:0}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item.icon a:before,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item.icon a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item.icon a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item.icon a:before{font:normal normal normal 14px/1 FontAwesome;font-size:20px;padding:0 .5em}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item.cart a:before,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item.cart a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item.cart a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item.cart a:before{content:'\f291'}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item.account a:before,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item.account a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item.account a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item.account a:before{content:'\f007'}
+#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item.logout a:before,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item.logout a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item.logout a:before,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item.logout a:before{content:'\f090'}
+#masthead #topbar .site-search{margin-bottom:0;width:100%}#masthead #topbar .site-search .widget_product_search{margin:0;margin-left:1em}
+.woocommerce-active .site-header{padding-top:0}.woocommerce-active .site-header .site-branding{max-width:200px;margin:0 auto;margin-top:0;float:initial;padding-bottom:1em}
+.woocommerce-active .site-header .main-navigation{width:100%;float:initial;margin:0}
+.storefront-primary-navigation{background-color:#fafafa;margin-top:2em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}
+.storefront-primary-navigation .main-navigation ul li:hover{background-color:#383838}
+.storefront-primary-navigation .main-navigation ul li a{padding:.5em}.home .page{display:none}
+.home .woocommerce .products .product{border:1px solid #fafafa;padding:1em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}
