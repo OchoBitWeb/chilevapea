@@ -143,10 +143,16 @@ i.fa, i.fab {
 			li {
 				&:hover {
 					background-color: $dark-gray;
+					a {
+						color: $light-gray;
+					}
 				}
 				a {
 					padding: 0.5em;
-					//color: white;
+					color: $dark-gray;
+					&:hover {
+						color: $light-gray;
+					}
 				}
 			}
 		}

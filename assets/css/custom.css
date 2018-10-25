@@ -17,5 +17,6 @@ ul li{padding:0 1em}@media(min-width:768px){.col-full{max-width:100%;padding:0 1
 .woocommerce-active .site-header .main-navigation{width:100%;float:initial;margin:0}
 .storefront-primary-navigation{background-color:#fafafa;margin-top:2em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}
 .storefront-primary-navigation .main-navigation ul li:hover{background-color:#383838}
-.storefront-primary-navigation .main-navigation ul li a{padding:.5em}.home .page{display:none}
+.storefront-primary-navigation .main-navigation ul li:hover a{color:#fafafa}.storefront-primary-navigation .main-navigation ul li a{padding:.5em;color:#383838}
+.storefront-primary-navigation .main-navigation ul li a:hover{color:#fafafa}.home .page{display:none}
 .home .woocommerce .products .product{border:1px solid #fafafa;padding:1em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}
