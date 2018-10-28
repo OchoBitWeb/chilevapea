@@ -35,10 +35,13 @@ i.fa, i.fab {
 
 #masthead {
 	padding-top: 0;
-	background-image: url(http://localhost:8888/chilevapea/wp-content/uploads/2018/10/black_leather_background.jpg);
-    background-size: cover;
-	.col-full {
-		padding: 0 3em;
+	background-image: url(/wp-content/uploads/2018/10/black_leather_background.jpg);
+	background-size: cover;
+	margin: 0;
+	@media (min-width:1200px) {
+		.col-full {
+			padding: 0 3em;
+		}
 	}
 	// --> Topbar
 	#topbar {
@@ -46,8 +49,11 @@ i.fa, i.fab {
 		color: white;
 		display: flex;
 		justify-content: flex-end;
-		padding: 2em;
-    	margin-bottom: -4em;
+
+		@media (min-width:600px) {
+			padding: 2em;
+			margin-bottom: -4em;
+		}
 		#topbar-left, #topbar-right {
 			width: 50%;
 			display: flex;
@@ -100,6 +106,11 @@ i.fa, i.fab {
 					}
 
 				}
+				@media (max-width:600px) {
+					#menu-top-bar-menu-left, #menu-top-bar-menu-right {
+						flex-direction: column;
+					}
+				}
 			}
 		}
 		.site-search {
@@ -134,11 +145,147 @@ i.fa, i.fab {
 	}
 }
 
+// Search
+#masthead {
+	.woocommerce-product-search {
+		display: inline-block;
+		line-height: 1;
+		order: 2;
+		position: absolute;
+		right: 105px;
+		top: 15px;
+		transition: all 300ms ease-in-out;
+		&:before {
+			color: white;
+			font-size: 20px;
+		}
+
+		@media (max-width:600px) {
+			right: 30px;
+			top: 16px;
+		}
+
+		// @media (min-width:1200px) {
+		// 	right: 15px;
+		// 	top: 21px;
+
+		// 	&:hover,
+		// 	&:active,
+		// 	&:active:hover,
+		// 	&:focus {
+		// 		.search-field {
+		// 			opacity: 1;
+		// 			width: 290px;
+		// 			z-index: 999;
+		// 		}
+
+		// 		.search-submit {
+		// 			cursor: pointer;
+		// 			z-index: 9999;
+		// 		}
+		// 	}
+		// }
+
+		@media (min-width:600px) {
+			&.hover {
+				.search-field {
+					opacity: 1;
+					width: 290px;
+					z-index: 999;
+				}
+
+				.search-submit {
+					cursor: pointer;
+					z-index: 9999;
+				}
+			}
+		}
+
+		.input-group { display: inline-block; }
+
+		.input-group-btn { width: auto; }
+
+		.search-field {
+			border: 0 none;
+			font-size: 14px;
+			height: auto;
+			opacity: 0;
+			padding: 10px;
+			position: absolute;
+			right: -50px;
+			transition: all 400ms ease-in-out;
+			width: 10px;
+			top: 10px;
+
+			@media (min-width:1200px) {
+				&:hover,
+				&:active,
+				&:focus {
+					opacity: 1;
+					width: 290px;
+					z-index: 999;
+				}
+			}
+		}
+
+		.search-submit {
+			background: none;
+			box-shadow: none;
+			height: auto;
+			line-height: 1;
+			padding: 9px 10px;
+			z-index: 999;
+
+			.fa {
+				vertical-align: middle;
+				font-size: 20px;
+				line-height: 1;
+				transition: all 300ms ease;
+			}
+
+			&:active {
+				box-shadow: none;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+}
+
+// #primary,
+// #secondary {
+// 	#searchform {
+// 		text-align: center;
+
+// 		.search-field {
+// 			border-radius: 2px 0 0 2px;
+// 			z-index: 1;
+// 		}
+
+// 		.search-submit {
+// 			box-shadow: none;
+// 			margin-left: -2px;
+// 			padding-bottom: 16px;
+// 			padding-top: 16px;
+
+// 			&:active {
+// 				left: 0;
+// 				top: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+
 // Main Nav
 .storefront-primary-navigation {
 	background-color: $light-gray;
 	margin-top: 2em;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+	.col-full {
+		margin: 0 auto;
+		text-align: center;
+	}
 	.main-navigation {
 		ul {
 			//background-color: $light-gray;
@@ -151,9 +298,9 @@ i.fa, i.fab {
 				}
 				a {
 					padding: 0.5em;
-					color: $dark-gray;
+					color: $dark-gray !important;
 					&:hover {
-						color: $light-gray;
+						color: $light-gray !important;
 					}
 				}
 			}
@@ -163,20 +310,62 @@ i.fa, i.fab {
 
 // Home Page
 .home {
-	.page {
-		display: none;
+	// .page {
+	// 	display: none;
+	// }
+	#banner {
+		.banner-section {
+			&:nth-child(2) {
+				padding: 3em 1em 1em;
+			}
+		}
+	}
+	h2.title, h2.section-title {
+		text-align: center;
+		border-bottom: 1px solid $dark-gray;
+		padding-bottom: 0.5em;
+		margin-bottom: 1em;
+	}
+	#content {
+		.entry-title {
+			display: none;
+		}
+
+		.entry-content {
+			padding: 3em 0;
+
+		}
 	}
 	.woocommerce {
 		.products {
 			.product {
 				border: 1px solid $light-gray;
 				padding: 1em;
-				box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+				box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+			}
+			.slick-track {
+				.product {
+					padding: 1em !important;
+					margin: 1em !important;
+				}
+
 			}
 		}
 	}
+	@media (min-width: 768px) {
+		&.page-template-template-fullwidth-php .site-main ul.products.columns-5 li.product, &.page-template-template-homepage-php .site-main ul.products.columns-5 li.product, &.storefront-full-width-content .site-main ul.products.columns-5 li.product {
+			width: 18.5%;
+			margin-right: 1.8%;
+			min-height: 450px;
+		}
+		&.page-template-template-homepage-php .site-main .storefront-product-categories ul.products.columns-5 li.product {
+			min-height: 288px;
+		}
 
+	}
 }
+
+
 
 // Product Page
 
@@ -185,5 +374,32 @@ i.fa, i.fab {
 		a {
 			top: 70%;
 		}
+	}
+}
+
+// Footer
+
+.site-footer {
+	padding: 1em;
+	.footer-widgets {
+		padding-top: 2em;
+		.block {
+			.widget-title {
+				padding: 0;
+				margin-bottom: 0.5em;
+			}
+		}
+		.menu {
+			.menu-item {
+				padding: 0;
+				margin-bottom: 0.5em;
+				&:before {
+					content: '';
+				}
+			}
+		}
+	}
+	.site-info {
+		padding: 1em 0;
 	}
 }

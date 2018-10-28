@@ -121,7 +121,7 @@ function tp_homepage_blocks_custom() {
 			'limit'   => 5,
 			'columns' => 5,
 			'title'   => __( 'Productos Recientes', 'storefront' ),
-			
+
 		);
 		return $args;
 	} );
