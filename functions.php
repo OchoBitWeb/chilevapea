@@ -103,8 +103,11 @@ function tp_homepage_blocks_custom() {
 	/* Shop by Category */
 	add_filter( 'storefront_product_categories_args', function( $args ) {
 		$args = array(
+			'orderby' => 'title',
+			'order'   => 'DESC',
 			'limit'   => 5,
 			'columns' => 5,
+			'child_categories' => '',
 			'title' => __( 'Categorías', 'storefront' ),
 		);
 		return $args;
@@ -113,15 +116,20 @@ function tp_homepage_blocks_custom() {
 	/* New In */
 	add_filter( 'storefront_recent_products_args', function( $args ) {
 		$args = array(
+			'orderby' => 'title',
+			'order'   => 'DESC',
 			'limit'   => 5,
 			'columns' => 5,
 			'title'   => __( 'Productos Recientes', 'storefront' ),
+			
 		);
 		return $args;
 	} );
 	/* Best Sellers */
 	add_filter( 'storefront_best_selling_products_args', function( $args ) {
 		$args = array(
+			'orderby' => 'title',
+			'order'   => 'DESC',
 			'limit'   => 5,
 			'columns' => 5,
 			'title'   => __( 'Mejores Vendidos', 'storefront' ),

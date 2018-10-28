@@ -20,9 +20,11 @@ ul {
 	}
 }
 @media (min-width: 768px) {
-	.col-full {
-		max-width: 100%;
-		padding: 0 1em;
+	body.home, .storefront-primary-navigation {
+		.col-full {
+			max-width: 100%;
+			padding: 0 1em;
+		}
 	}
 }
 i.fa, i.fab {
@@ -33,10 +35,10 @@ i.fa, i.fab {
 
 #masthead {
 	padding-top: 0;
-	background-image: url(/wp-content/uploads/2018/10/black_leather_background.jpg);
+	background-image: url(http://localhost:8888/chilevapea/wp-content/uploads/2018/10/black_leather_background.jpg);
     background-size: cover;
 	.col-full {
-		padding: 0;
+		padding: 0 3em;
 	}
 	// --> Topbar
 	#topbar {
@@ -174,4 +176,14 @@ i.fa, i.fab {
 		}
 	}
 
+}
+
+// Product Page
+
+.product {
+	.storefront-product-pagination {
+		a {
+			top: 70%;
+		}
+	}
 }

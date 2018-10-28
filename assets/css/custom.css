@@ -1,7 +1,7 @@
 body,button,input,textarea{font-family:'PT Serif',serif}ul{list-style:none;margin:0}
-ul li{padding:0 1em}@media(min-width:768px){.col-full{max-width:100%;padding:0 1em}
-}i.fa,i.fab{font:normal normal normal 30px/1 FontAwesome;color:white}#masthead{padding-top:0;background-image:url(/wp-content/uploads/2018/10/black_leather_background.jpg);background-size:cover}
-#masthead .col-full{padding:0}#masthead #topbar{color:white;display:flex;justify-content:flex-end;padding:2em;margin-bottom:-4em}
+ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-primary-navigation .col-full{max-width:100%;padding:0 1em}
+}i.fa,i.fab{font:normal normal normal 30px/1 FontAwesome;color:white}#masthead{padding-top:0;background-image:url(http://localhost:8888/chilevapea/wp-content/uploads/2018/10/black_leather_background.jpg);background-size:cover}
+#masthead .col-full{padding:0 3em}#masthead #topbar{color:white;display:flex;justify-content:flex-end;padding:2em;margin-bottom:-4em}
 #masthead #topbar #topbar-left,#masthead #topbar #topbar-right{width:50%;display:flex}
 #masthead #topbar #topbar-right{justify-content:flex-end}#masthead #topbar .section{display:flex;justify-content:center;flex-direction:column}
 #masthead #topbar .section .title{color:#fff}#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left{display:flex}
@@ -20,3 +20,4 @@ ul li{padding:0 1em}@media(min-width:768px){.col-full{max-width:100%;padding:0 1
 .storefront-primary-navigation .main-navigation ul li:hover a{color:#fafafa}.storefront-primary-navigation .main-navigation ul li a{padding:.5em;color:#383838}
 .storefront-primary-navigation .main-navigation ul li a:hover{color:#fafafa}.home .page{display:none}
 .home .woocommerce .products .product{border:1px solid #fafafa;padding:1em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}
+.product .storefront-product-pagination a{top:70%}
