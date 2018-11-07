@@ -10,6 +10,8 @@ $light-gray: #fafafa;
 // General Styles
 body, button, input, textarea {
 	font-family: 'PT Serif', serif;
+	font-family: 'Roboto', sans-serif;
+    font-family: Open Sans;
 }
 ul {
 	list-style: none;
@@ -53,6 +55,8 @@ i.fa, i.fab {
 		@media (min-width:600px) {
 			padding: 2em;
 			margin-bottom: -4em;
+			position: relative;
+    		top: 4em;
 		}
 		#topbar-left, #topbar-right {
 			width: 50%;
@@ -60,6 +64,9 @@ i.fa, i.fab {
 		}
 		#topbar-right {
 			justify-content: flex-end;
+			.menu-top-bar-menu-right-container {
+				margin-right: 4em;
+			}
 		}
 		.section {
 			display: flex;
@@ -136,6 +143,14 @@ i.fa, i.fab {
 			margin-top: 0px;
 			float: initial;
 			padding-bottom: 1em;
+			a {
+				img {
+					max-width: 170px;
+					margin: 0 auto;
+					position: relative;
+					top: -1em;
+				}
+			}
 		}
 		.main-navigation {
 			width: 100%;
@@ -252,35 +267,10 @@ i.fa, i.fab {
 	}
 }
 
-// #primary,
-// #secondary {
-// 	#searchform {
-// 		text-align: center;
-
-// 		.search-field {
-// 			border-radius: 2px 0 0 2px;
-// 			z-index: 1;
-// 		}
-
-// 		.search-submit {
-// 			box-shadow: none;
-// 			margin-left: -2px;
-// 			padding-bottom: 16px;
-// 			padding-top: 16px;
-
-// 			&:active {
-// 				left: 0;
-// 				top: 0;
-// 			}
-// 		}
-// 	}
-// }
-
-
 // Main Nav
 .storefront-primary-navigation {
-	background-color: $light-gray;
-	margin-top: 2em;
+	background-color: white;
+	margin-top: 0;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.15);
 	.col-full {
 		margin: 0 auto;
@@ -290,6 +280,10 @@ i.fa, i.fab {
 		ul {
 			//background-color: $light-gray;
 			li {
+				text-transform: uppercase;
+				padding: 1em;
+				background: white;
+				letter-spacing: 2px;
 				&:hover {
 					background-color: $dark-gray;
 					a {
@@ -365,8 +359,6 @@ i.fa, i.fab {
 	}
 }
 
-
-
 // Product Page
 
 .product {
@@ -374,6 +366,16 @@ i.fa, i.fab {
 		a {
 			top: 70%;
 		}
+	}
+}
+
+// single Product page
+
+.single {
+	#primary {
+		width: 100%;
+		margin: 0;
+		float: initial;
 	}
 }
 

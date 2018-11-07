@@ -1,9 +1,11 @@
-body,button,input,textarea{font-family:'PT Serif',serif}ul{list-style:none;margin:0}
-ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-primary-navigation .col-full{max-width:100%;padding:0 1em}
+body,button,input,textarea{font-family:'PT Serif',serif;font-family:'Roboto',sans-serif;font-family:Open Sans}
+ul{list-style:none;margin:0}ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-primary-navigation .col-full{max-width:100%;padding:0 1em}
 }i.fa,i.fab{font:normal normal normal 30px/1 FontAwesome;color:white}#masthead{padding-top:0;background-image:url(/wp-content/uploads/2018/10/black_leather_background.jpg);background-size:cover;margin:0}
 @media(min-width:1200px){#masthead .col-full{padding:0 3em}}#masthead #topbar{color:white;display:flex;justify-content:flex-end}
-@media(min-width:600px){#masthead #topbar{padding:2em;margin-bottom:-4em}}#masthead #topbar #topbar-left,#masthead #topbar #topbar-right{width:50%;display:flex}
-#masthead #topbar #topbar-right{justify-content:flex-end}#masthead #topbar .section{display:flex;justify-content:center;flex-direction:column}
+@media(min-width:600px){#masthead #topbar{padding:2em;margin-bottom:-4em;position:relative;top:4em}
+}#masthead #topbar #topbar-left,#masthead #topbar #topbar-right{width:50%;display:flex}
+#masthead #topbar #topbar-right{justify-content:flex-end}#masthead #topbar #topbar-right .menu-top-bar-menu-right-container{margin-right:4em}
+#masthead #topbar .section{display:flex;justify-content:center;flex-direction:column}
 #masthead #topbar .section .title{color:#fff}#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left{display:flex}
 #masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item a,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item a,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item a,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item a{color:white}
 #masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right .menu-item a:hover,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left .menu-item a:hover{color:#fafafa}
@@ -15,6 +17,7 @@ ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-prim
 @media(max-width:600px){#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-left,#masthead #topbar .section .menu-top-bar-menu-right-container #menu-top-bar-menu-right,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-left,#masthead #topbar .section .menu-top-bar-menu-left-container #menu-top-bar-menu-right{flex-direction:column}
 }#masthead #topbar .site-search{margin-bottom:0;width:100%}#masthead #topbar .site-search .widget_product_search{margin:0;margin-left:1em}
 .woocommerce-active .site-header{padding-top:0}.woocommerce-active .site-header .site-branding{max-width:200px;margin:0 auto;margin-top:0;float:initial;padding-bottom:1em}
+.woocommerce-active .site-header .site-branding a img{max-width:170px;margin:0 auto;position:relative;top:-1em}
 .woocommerce-active .site-header .main-navigation{width:100%;float:initial;margin:0}
 #masthead .woocommerce-product-search{display:inline-block;line-height:1;order:2;position:absolute;right:105px;top:15px;transition:all 300ms ease-in-out}
 #masthead .woocommerce-product-search:before{color:white;font-size:20px}@media(max-width:600px){#masthead .woocommerce-product-search{right:30px;top:16px}
@@ -26,8 +29,9 @@ ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-prim
 }#masthead .woocommerce-product-search .search-submit{background:0;box-shadow:none;height:auto;line-height:1;padding:9px 10px;z-index:999}
 #masthead .woocommerce-product-search .search-submit .fa{vertical-align:middle;font-size:20px;line-height:1;transition:all 300ms ease}
 #masthead .woocommerce-product-search .search-submit:active{box-shadow:none;left:0;top:0}
-.storefront-primary-navigation{background-color:#fafafa;margin-top:2em;box-shadow:0 2px 2px rgba(0,0,0,0.15)}
-.storefront-primary-navigation .col-full{margin:0 auto;text-align:center}.storefront-primary-navigation .main-navigation ul li:hover{background-color:#383838}
+.storefront-primary-navigation{background-color:white;margin-top:0;box-shadow:0 2px 2px rgba(0,0,0,0.15)}
+.storefront-primary-navigation .col-full{margin:0 auto;text-align:center}.storefront-primary-navigation .main-navigation ul li{text-transform:uppercase;padding:1em;background:white;letter-spacing:2px}
+.storefront-primary-navigation .main-navigation ul li:hover{background-color:#383838}
 .storefront-primary-navigation .main-navigation ul li:hover a{color:#fafafa}.storefront-primary-navigation .main-navigation ul li a{padding:.5em;color:#383838 !important}
 .storefront-primary-navigation .main-navigation ul li a:hover{color:#fafafa !important}
 .home #banner .banner-section:nth-child(2){padding:3em 1em 1em}.home h2.title,.home h2.section-title{text-align:center;border-bottom:1px solid #383838;padding-bottom:.5em;margin-bottom:1em}
@@ -36,7 +40,7 @@ ul li{padding:0 1em}@media(min-width:768px){body.home .col-full,.storefront-prim
 .home .woocommerce .products .slick-track .product{padding:1em !important;margin:1em !important}
 @media(min-width:768px){.home.page-template-template-fullwidth-php .site-main ul.products.columns-5 li.product,.home.page-template-template-homepage-php .site-main ul.products.columns-5 li.product,.home.storefront-full-width-content .site-main ul.products.columns-5 li.product{width:18.5%;margin-right:1.8%;min-height:450px}
 .home.page-template-template-homepage-php .site-main .storefront-product-categories ul.products.columns-5 li.product{min-height:288px}
-}.product .storefront-product-pagination a{top:70%}.site-footer{padding:1em}.site-footer .footer-widgets{padding-top:2em}
-.site-footer .footer-widgets .block .widget-title{padding:0;margin-bottom:.5em}.site-footer .footer-widgets .menu .menu-item{padding:0;margin-bottom:.5em}
-.site-footer .footer-widgets .menu .menu-item:before{content:''}
+}.product .storefront-product-pagination a{top:70%}.single #primary{width:100%;margin:0;float:initial}
+.site-footer{padding:1em}.site-footer .footer-widgets{padding-top:2em}.site-footer .footer-widgets .block .widget-title{padding:0;margin-bottom:.5em}
+.site-footer .footer-widgets .menu .menu-item{padding:0;margin-bottom:.5em}.site-footer .footer-widgets .menu .menu-item:before{content:''}
 .site-footer .site-info{padding:1em 0}
