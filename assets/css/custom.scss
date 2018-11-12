@@ -301,6 +301,9 @@ i.fa, i.fab {
 		}
 	}
 }
+.wishlist_products_counter:before {
+	font-size: 30px !important;
+}
 
 // Home Page
 .home {
@@ -308,8 +311,9 @@ i.fa, i.fab {
 	// 	display: none;
 	// }
 	#banner {
+		//padding-top: 3em;
 		.banner-section {
-			&:nth-child(2) {
+			&:nth-child(1) {
 				padding: 3em 1em 1em;
 			}
 		}
@@ -336,6 +340,20 @@ i.fa, i.fab {
 				border: 1px solid $light-gray;
 				padding: 1em;
 				box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+				.tinv-wishlist {
+					width: 20px;
+					float: left;
+				}
+				.add_to_cart_button.button.br_compare_button {
+					width: 20px;
+					float: right;
+					.fa {
+						font-size: 15px;
+					}
+					.br_compare_button_text {
+						display: none;
+					}
+				}
 			}
 			.slick-track {
 				.product {

@@ -34,9 +34,13 @@ ul{list-style:none;margin:0}ul li{padding:0 1em}@media(min-width:768px){body.hom
 .storefront-primary-navigation .main-navigation ul li:hover{background-color:#383838}
 .storefront-primary-navigation .main-navigation ul li:hover a{color:#fafafa}.storefront-primary-navigation .main-navigation ul li a{padding:.5em;color:#383838 !important}
 .storefront-primary-navigation .main-navigation ul li a:hover{color:#fafafa !important}
-.home #banner .banner-section:nth-child(2){padding:3em 1em 1em}.home h2.title,.home h2.section-title{text-align:center;border-bottom:1px solid #383838;padding-bottom:.5em;margin-bottom:1em}
+.wishlist_products_counter:before{font-size:30px !important}.home #banner .banner-section:nth-child(1){padding:3em 1em 1em}
+.home h2.title,.home h2.section-title{text-align:center;border-bottom:1px solid #383838;padding-bottom:.5em;margin-bottom:1em}
 .home #content .entry-title{display:none}.home #content .entry-content{padding:3em 0}
 .home .woocommerce .products .product{border:1px solid #fafafa;padding:1em;box-shadow:0 2px 2px rgba(0,0,0,0.15)}
+.home .woocommerce .products .product .tinv-wishlist{width:20px;float:left}.home .woocommerce .products .product .add_to_cart_button.button.br_compare_button{width:20px;float:right}
+.home .woocommerce .products .product .add_to_cart_button.button.br_compare_button .fa{font-size:15px}
+.home .woocommerce .products .product .add_to_cart_button.button.br_compare_button .br_compare_button_text{display:none}
 .home .woocommerce .products .slick-track .product{padding:1em !important;margin:1em !important}
 @media(min-width:768px){.home.page-template-template-fullwidth-php .site-main ul.products.columns-5 li.product,.home.page-template-template-homepage-php .site-main ul.products.columns-5 li.product,.home.storefront-full-width-content .site-main ul.products.columns-5 li.product{width:18.5%;margin-right:1.8%;min-height:450px}
 .home.page-template-template-homepage-php .site-main .storefront-product-categories ul.products.columns-5 li.product{min-height:288px}
