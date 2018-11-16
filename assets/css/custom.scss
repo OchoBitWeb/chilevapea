@@ -287,14 +287,22 @@ i.fa, i.fab {
 				&:hover {
 					background-color: $dark-gray;
 					a {
-						color: $light-gray;
+						color: white !important;
 					}
 				}
 				a {
-					padding: 0.5em;
+					padding: 0.2em;
 					color: $dark-gray !important;
 					&:hover {
 						color: $light-gray !important;
+					}
+				}
+			}
+			ul.sub-menu {
+				li {
+					background-color: $light-gray;
+					a {
+						color: $dark-gray !important;
 					}
 				}
 			}
@@ -343,16 +351,35 @@ i.fa, i.fab {
 				.tinv-wishlist {
 					width: 20px;
 					float: left;
+					.tinvwl_add_to_wishlist_button {
+						margin-top: 0;
+						background: $dark-gray;
+						//border-radius: 5px;
+						max-height: 32px;
+						&:before {
+							color: white;
+						}
+					}
 				}
 				.add_to_cart_button.button.br_compare_button {
-					width: 20px;
+					width: 30px;
 					float: right;
+					position: relative;
+					right: 10px;
+					bottom: 5px;
+					//border-radius: 5px;
 					.fa {
 						font-size: 15px;
 					}
 					.br_compare_button_text {
 						display: none;
 					}
+				}
+				.button {
+					padding: 5px 10px;
+					max-width: 130px;
+					//border-radius: 5px;
+					width: 100%;
 				}
 			}
 			.slick-track {
@@ -386,14 +413,36 @@ i.fa, i.fab {
 		}
 	}
 }
+.woocommerce-info, .woocommerce-noreviews, p.no-comments {
+    background-color: $light-gray !important;
+}
 
 // single Product page
 
-.single {
+.single, .archive {
 	#primary {
 		width: 100%;
 		margin: 0;
 		float: initial;
+		ul.products li.product .button {
+			min-width: 150px;
+		}
+		a.add_to_cart_button.button.br_compare_button {
+			max-width: 180px;
+			padding: 5px;
+			.fa {
+				font-size: 20px;
+				position: relative;
+				top: 3px;
+			}
+		}
+	}
+}
+.archive {
+	#primary {
+		width: 73.9130434783%;
+		float: left;
+		margin-right: 4.347826087%;
 	}
 }
 
@@ -401,6 +450,9 @@ i.fa, i.fab {
 
 .site-footer {
 	padding: 1em;
+	background-image: url(/wp-content/uploads/2018/10/black_leather_background.jpg);
+    background-size: cover;
+    margin: 0;
 	.footer-widgets {
 		padding-top: 2em;
 		.block {
@@ -413,6 +465,9 @@ i.fa, i.fab {
 			.menu-item {
 				padding: 0;
 				margin-bottom: 0.5em;
+				a {
+					color: white;
+				}
 				&:before {
 					content: '';
 				}
