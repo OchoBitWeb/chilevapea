@@ -140,3 +140,65 @@ function tp_homepage_blocks_custom() {
 	/* And so on.... */
 }
 add_action( 'after_setup_theme', 'tp_homepage_blocks_custom' );
+
+
+/* Footer Credits */
+function storefront_credit() {
+	?>
+	<div class="site-info">
+		<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
+		<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
+		<br />
+		<?php
+		if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
+			the_privacy_policy_link( '', '' );
+		}
+		?>
+		<?php } ?>
+	</div><!-- .site-info -->
+	<?php
+}
+
+/* Logo Carousel Home*/
+function logo_carousel_home() {
+	?>
+	<section class="storefront-product-section storefront-product-brands">
+		<h2 class="section-title">Marcas</h2>
+		<div><?php echo do_shortcode( '[logocarousel id="804"]' ); ?></div>
+	</section>
+	<?php
+}
+add_filter( 'storefront_homepage_after_product_categories', 'logo_carousel_home' );
+
+function full_width_headers() {
+	?>
+		<div class="full-width_title">
+			<?php
+			echo the_title( '<h3>', '</h3>' );
+			?>
+		</div>
+	<?php
+}
+add_filter( 'storefront_before_content', 'full_width_headers' );
+
+
+/* Mensaje evios */
+function wnd_checkout_message_bottom() {
+	echo '<div class="wnd-checkout-message">
+		<p><strong>Región Metropolitana de Santiago:</strong></p>
+		<p>
+			<ol>
+				<li>Todo envió será hecho a la sucursal de ChileExpress mas cercana al cliente, <strong>con cobro a destino.</strong> <strong class="alert">Será de mucha ayuda para nosotros que coloques la sucursal de tu preferencia para retirar tus productos.</strong></li>
+				<li>Toda compra que supere los <strong>50.000 $</strong> tendrán envió gratuito y llegara directo a tu domicilio sin necesidad de que vayas a retirar en sucursal. </li>
+			</ol>
+		</p>
+		<p><strong>Regiones:</strong></p>
+		<p>
+			<ol>
+				<li>Todo envió será hecho a la sucursal de ChileExpress mas cercana al cliente, <strong>con cobro a destino.</strong> <strong class="alert">Será de mucha ayuda para nosotros que coloques la sucursal de tu preferencia para retirar tus productos.</strong></li>
+				<li>Toda compra que supere los <strong>100.000 $</strong> tendrán envió gratuito hasta la sucursal de ChileExpress mas cercana al cliente.</li>
+			</ol>
+		</p>
+	</div>';
+}
+add_action( 'woocommerce_after_shipping_rate', 'wnd_checkout_message_bottom', 10 );
