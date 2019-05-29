@@ -101,7 +101,7 @@ add_action( 'init', 'remove_sf_actions', 1 );
 
 function tp_homepage_blocks_custom() {
 
-	/* Shop by Category */
+	/* Sale */
 	add_filter( 'storefront_on_sale_products_args', function( $args ) {
 		$args = array(
 			'orderby' => 'title',
@@ -109,7 +109,7 @@ function tp_homepage_blocks_custom() {
 			'limit'   => 5,
 			'columns' => 5,
 			'child_categories' => '',
-			'title' => __( 'Chile Vapea Cyber Day', 'storefront' ),
+			'title' => __( 'ChileVapea Cyber Day', 'storefront' ),
 		);
 		return $args;
 	} );
@@ -196,7 +196,7 @@ function full_width_headers() {
 add_filter( 'storefront_before_content', 'full_width_headers' );
 
 
-/* Mensaje evios */
+/* Mensaje envios */
 function wnd_checkout_message_bottom() {
 	echo '<div class="wnd-checkout-message">
 		<p><strong>Región Metropolitana de Santiago:</strong></p>
