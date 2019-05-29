@@ -91,7 +91,7 @@ function remove_sf_actions() {
 	remove_action( 'storefront_header', 'storefront_product_search', 40 );
 	remove_action( 'homepage', 'storefront_homepage_content', 5 );
 	remove_action( 'homepage', 'storefront_popular_products', 5 );
-	remove_action( 'homepage', 'storefront_on_sale_products', 5 );
+	//remove_action( 'homepage', 'storefront_on_sale_products', 5 );
 	remove_action( 'homepage', 'storefront_best_selling_products', 5 );
 	remove_action( 'storefront_content_top', 'storefront_shop_messages', 15 );
 	remove_action( 'storefront_homepage', 'storefront_homepage_header', 10 );
@@ -100,6 +100,20 @@ function remove_sf_actions() {
 add_action( 'init', 'remove_sf_actions', 1 );
 
 function tp_homepage_blocks_custom() {
+
+	/* Shop by Category */
+	add_filter( 'storefront_on_sale_products_args', function( $args ) {
+		$args = array(
+			'orderby' => 'title',
+			'order'   => 'DESC',
+			'limit'   => 5,
+			'columns' => 5,
+			'child_categories' => '',
+			'title' => __( 'Chile Vapea Cyber Day', 'storefront' ),
+		);
+		return $args;
+	} );
+
 	/* Shop by Category */
 	add_filter( 'storefront_product_categories_args', function( $args ) {
 		$args = array(
